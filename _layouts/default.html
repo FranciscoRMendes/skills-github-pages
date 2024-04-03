@@ -1,48 +1,41 @@
+---
+layout: default
+---
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
   <head>
-
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="UTF-8">
-
-{% seo %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
+    <title>{{ page.title | default: site.title | default: "Kyle Kovacs" }}</title>
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <script src="{{ "/assets/main.js" | relative_url }}"></script>
     <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']]
-            }
-        };
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$']]
+        }
+      };
     </script>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {% seo %}
   </head>
   <body>
-    <header class="page-header" role="banner">
+    <header>
       <h1 class="project-name">{{ page.title | default: site.title | default: "Kyle Kovacs" }}</h1>
-      <a href="{{ site.github.url }}" class="btn">Home</a>
-      <a href="{{ site.github.url }}/portfolio" class="btn">Portfolio</a>
-      <a href="{{ site.github.url }}/blog" class="btn">Blog</a>
+      <nav>
+        <a href="{{ "/" | relative_url }}">Home</a>
+        <a href="{{ "/portfolio" | relative_url }}">Portfolio</a>
+        <a href="{{ "/blog" | relative_url }}">Blog</a>
+      </nav>
     </header>
 
-    <main id="content" class="main-content" role="main">
+    <main id="content">
       {{ content }}
-      <footer class="site-footer">
-        <span class="site-footer-owner">View <a href="{{ site.github.repository_url }}">this website</a> on github.</span>
-      </footer>
     </main>
+
+    <footer>
+      <span class="site-footer-owner">View <a href="{{ site.github.repository_url }}">this website</a> on GitHub.</span>
+    </footer>
   </body>
 </html>

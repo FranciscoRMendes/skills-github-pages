@@ -3,11 +3,15 @@ title: "FRANCO-MENDES"
 date: 2024-04-03
 ---
 
-text
-
-$E = mc^2$
-
-hi
+hshsh
 
 
-text
+```python
+print("hello")
+def e(c,m):
+  return c*m**2
+```
+
+
+
+

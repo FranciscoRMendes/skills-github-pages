@@ -119,7 +119,10 @@ $$
 
 We can combine these equations into one :
 
-$$A^{(2)} = \text{sigmoid}(W^{(2)} \text{ReLU}(W^{(1)} X + b^{(1)}) + b^{(2)}) $$
+$$
+A^{(2)} = \text{sigmoid}(W^{(2)} \text{ReLU}(W^{(1)} X + b^{(1)}) + b^{(2)})
+$$
+
 
 In embedded systems its common to just feed an extra input of 1's to the input and drop the biases. If you are familiar with matrix formulations of linear regression, you are probably familiar with this, but if not, you can see this clearly by the following,
 

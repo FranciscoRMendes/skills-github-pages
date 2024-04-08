@@ -31,13 +31,13 @@ $$
 Given the matrix above the main focus of this article will be to reduce the matrix size so that we never actually store all 12 elements of the matrix. With that said here is a more precise definition of how much space the matrix above takes on hardware memory. 
 In IEEE 754 single-precision format:
 
-$$
-\begin{itemize}
-  \item 1 bit is used for the sign (positive or negative).
-  \item 8 bits are used for the exponent.
-  \item 23 bits are used for the significand (also called mantissa or fraction).
-\end{itemize}
-$$
+
+
+  * 1 bit is used for the sign (positive or negative).
+  * 8 bits are used for the exponent.
+  * 23 bits are used for the significand (also called mantissa or fraction).
+
+
 
 
 The total of 32 bits (or 4 bytes) is used to represent a single floating-point number.
@@ -68,12 +68,12 @@ To compute each element of the resulting vector, we perform the dot product of e
 
 Therefore, for the entire operation:
 
-$$
-\begin{itemize}
-    \item There are 3 rows in the matrix.
-    \item For each row, there are 4 multiplications and 3 additions.
-\end{itemize}
-$$
+
+
+* There are 3 rows in the matrix.
+* For each row, there are 4 multiplications and 3 additions.
+
+
 
 Hence, the total number of multiplications is 3×4=123×4=12, and the total number of additions is 3×3=93×3=9.
 
@@ -108,6 +108,7 @@ A^{(1)} = \text{ReLU}(Z^{(1)})
 $$
 
 Output layer:
+
 $$
 Z^{(2)} = W^{(2)} A^{(1)} + b^{(2)}
 $$

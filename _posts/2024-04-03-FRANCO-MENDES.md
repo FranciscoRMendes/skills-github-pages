@@ -128,10 +128,17 @@ $$
 Thus, after adding in the 1s to X and the column of biases to $W$ we get, 
 
 $$ A^{(2)} = \text{sigmoid}(W^{(2)} \text{ReLU}(W^{(1)} X)) $$
-This X and W are modified versions of the X, W mentioned before but we will stick to this notation for the rest of this article.  You can generalize this to as many layers as you want. 
-$$ \hat{y} = A^{(L)} = \text{activation}(W^{(L)} \text{activation}(W^{(L-1)} \dots \text{activation}(W^{(1)} X))) $$
 
-$$ \hat{y} = A^{(L)} = \text{activation}(W^{(L)} \text{activation}(W^{(L-1)} \dots \text{activation}(USV' X))) $$
+This X and W are modified versions of the X, W mentioned before but we will stick to this notation for the rest of this article.  You can generalize this to as many layers as you want. 
+
+$$
+\hat{y} = A^{(L)} = \text{activation}(W^{(L)} \text{activation}(W^{(L-1)} \dots \text{activation}(W^{(1)} X))) 
+$$
+
+
+$$ 
+\hat{y} = A^{(L)} = \text{activation}(W^{(L)} \text{activation}(W^{(L-1)} \dots \text{activation}(USV' X))) 
+$$
 
 
 

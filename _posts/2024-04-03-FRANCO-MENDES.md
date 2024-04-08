@@ -118,9 +118,11 @@ A^{(2)} = \text{sigmoid}(Z^{(2)})
 $$
 
 We can combine these equations into one :
+
 $$A^{(2)} = \text{sigmoid}(W^{(2)} \text{ReLU}(W^{(1)} X + b^{(1)}) + b^{(2)}) $$
 
 In embedded systems its common to just feed an extra input of 1's to the input and drop the biases. If you are familiar with matrix formulations of linear regression, you are probably familiar with this, but if not, you can see this clearly by the following,
+
 $$
 W'X = \begin{bmatrix} w_{11} & w_{12} & b_1 \\ w_{21} & w_{22} & b_2 \end{bmatrix} \begin{bmatrix} x_1 & 1 \\ x_2 & 1 \end{bmatrix} = \begin{bmatrix} w_{11}x_1 + w_{12}x_2 + b_1 \\ w_{21}x_1 + w_{22}x_2 + b_2 \end{bmatrix}
 $$
